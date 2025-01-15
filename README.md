@@ -102,3 +102,7 @@ This document provides a detailed explanation of the parameters used for configu
 8. **LL[3]**: Low position limit
     - Range: -2^31 < LL[3] < 2^31 – 1
     - -999999990 (default)
+
+9. **GS[14]**: Maximum speed error for which KP[N] is cleared in speed controller if no encounter count exceeds GS[0]
+    - Range: 0...0…2^31 - 1
+    - 6300.f (default)
