@@ -4,7 +4,7 @@ This document provides a detailed explanation of the parameters used for configu
 
 ## Parameters
 
-**CA[N] - Commutation Array**
+**Commutation Array**
 1. **CA[1]**: Digital Hall sensor A polarity
    - 1 = HIGH (default)
    - 0 = LOW
@@ -87,3 +87,18 @@ This document provides a detailed explanation of the parameters used for configu
    - Range: [0…MC/2]
    - 10.0f (default)
 
+5. **HL[2]**: High speed limit
+   - Range: Velocity range
+   - 3000.0f (default)
+
+6. **LL[2]**: Low speed limit
+   - Range: Velocity range
+   - -3000.0f (default)
+
+7. **HL[3]**: High position limit
+   - Range: -2^31 < HL[3] < 2^31 – 1
+   - 999999990 (default)
+
+8. **LL[3]**: Low position limit
+    - Range: -2^31 < LL[3] < 2^31 – 1
+    - -999999990 (default)
