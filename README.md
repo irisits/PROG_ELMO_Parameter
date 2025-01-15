@@ -77,23 +77,23 @@ This document provides a detailed explanation of the parameters used for configu
 1. **MC**: Maximum peak driver current (Read-only parameter)
 
 2. **PL[1]**: Motor maximum peak current
-   - Range: [0…MC]
+   - Range: 0…MC
    - 30.0f (default)
 
 3. **PL[2]**: Motor maximum peak duration
-   - Range: [1…3]
+   - Range: 1…3
 
 4. **CL[1]**: Maximum allowed continuous motor phase current
-   - Range: [0…MC/2]
+   - Range: 0…MC/2
    - 10.0f (default)
 
 5. **HL[2]**: High speed limit
    - Range: Velocity range
-   - 3000.0f (default)
+   - 3000 (default)
 
 6. **LL[2]**: Low speed limit
    - Range: Velocity range
-   - -3000.0f (default)
+   - -3000 (default)
 
 7. **HL[3]**: High position limit
    - Range: -2^31 < HL[3] < 2^31 – 1
@@ -105,4 +105,34 @@ This document provides a detailed explanation of the parameters used for configu
 
 9. **GS[14]**: Maximum speed error for which KP[N] is cleared in speed controller if no encounter count exceeds GS[0]
     - Range: 0...0…2^31 - 1
-    - 6300.f (default)
+    - 6300 (default)
+
+**PI Parameter**
+1. **KP[1]**: PI current control filter
+   - 0.593f (default)
+
+2. **KI[1]**: PI current control filter
+   - 828.0f (default)
+
+3. **KP[2]**: PI velocity control filter
+   - 60.0f (default)
+
+4. **KI[2]**: PI velocity control filter
+   - 2000.0f (default)
+
+**Mode of Operation**
+1. **PM**: Profiler Mode
+   - 0 = For UM=2, AC, DC, and SF are not used (default)
+   - 1 = For UM=2, AC, DC, and SF are used normally
+
+2. **SF**: Smooth Factor
+   - Defines the motion smoothing factor for PTP and jogging motions
+   - 0 (default)
+
+3. **AC**: Acceleration
+   - Defines the maximum acceleration in counts/second²
+   - 8307415 (default)
+
+4. **DC**: Deceleration
+   - Defines the maximum deceleration in counts/second²
+   - 8307415 (default)
