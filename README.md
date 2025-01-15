@@ -72,3 +72,18 @@ This document provides a detailed explanation of the parameters used for configu
 14. **CA[25]**: Motor direction
     - 0 = Reverse phase driving so that the motor direction with positive torque command is reversed
     - 1 = Keep the original motor direction, as connected by user (default)
+
+**LIMIT**
+1. **MC**: Maximum peak driver current (Read-only parameter)
+
+2. **PL[1]**: Motor maximum peak current
+   - Range: [0…MC]
+   - 30.0f (default)
+
+3. **PL[2]**: Motor maximum peak duration
+   - Range: [1…3]
+
+4. **CL[1]**: Maximum allowed continuous motor phase current
+   - Range: [0…MC/2]
+   - 10.0f (default)
+
